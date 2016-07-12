@@ -1,0 +1,318 @@
+/* FONTS */
+@font-face {
+        font-family: "Roboto-Regular";
+        src: url("../fonts/Roboto-Regular.ttf")
+}
+
+body,h1,h2,h3,h4,p,button,option,i,span,input,label {
+        font-family: Roboto-Regular;
+        -webkit-font-smoothing: antialiased;
+}
+
+
+button {
+        font-weight: bold;
+}
+
+/* EFFECTS (Shadows...) */
+.inset-shadow {
+                box-shadow: inset 0px 0px 10px 0px #000;
+        -webkit-box-shadow: inset 0px 0px 10px 0px #000;
+           -moz-box-shadow: inset 0px 0px 10px 0px #000;
+             -o-box-shadow: inset 0px 0px 10px 0px #000;
+}
+
+.bottom-border-shadow {
+        -webkit-box-shadow: 0 8px 4px -6px black;
+           -moz-box-shadow: 0 8px 4px -6px black;
+                box-shadow: 0 8px 4px -6px black;
+                    margin: 3px;
+}
+
+.top-border-rounded {
+        -webkit-border-radius: 2px 2px 0px 0px;
+           -moz-border-radius: 2px 2px 0px 0px;
+                border-radius: 2px 2px 0px 0px;
+}
+
+/* HEADER BAR */
+.platform-android .nav-bar-has-subheader .bar,
+.nav-bar-has-subheader .bar {
+        background-image: none;
+        background-color: #333;
+}
+.platform-android .bar,
+.bar {
+        background-image: none;
+        background-color: #333;
+}
+.platform-android .bar .title,
+.bar .title {
+        font-size: 20px;
+        font-weight: bold;
+        color: whitesmoke;
+}
+.platform-android .ion-navicon {
+        color: whitesmoke !important;
+}
+
+/* SIDE-MENU */
+.side-menu-left{
+        background-color: #333;
+        color: whitesmoke;
+}
+
+ion-list.menu-list .menu-item {
+        font-weight: bold;
+        color: whitesmoke;
+        margin: 0px;
+        border: 0px solid #222;
+        border-bottom: 1px solid #222;
+}
+
+ion-list.menu-list .item.active,
+ion-list.menu-list .item.activated,
+ion-list.menu-list .item-complex.active .item-content,
+ion-list.menu-list .item-complex.activated .item-content,
+ion-list.menu-list .item .item-content.active,
+ion-list.menu-list .item .item-content.activated {
+        font-weight: bold;
+        border-color: #333;
+        color: whitesmoke;
+        background: #00549a;
+}
+ion-list.menu-list ion-item.menu-item a {
+        background: #333;
+}
+ion-list.menu-list ion-item.menu-item a:hover {
+        font-weight: bold;
+        background: #222;
+}
+ion-list.menu-list ion-item.menu-item a:active {
+        font-weight: bold;
+        color: whitesmoke;
+        background: #00549a;
+}
+
+/* VIEW */
+.my-view ion-content {
+        /*background-color: #00549a;*/
+        background-color: #003366; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-linear-gradient(top left, #00549a 0%, #003366 100%);
+        background: -o-linear-gradient(top left, #00549a 0%, #003366 100%);
+        background: linear-gradient(to bottom right, #00549a 0%, #003366 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        color: white;
+}
+
+h2 {font-size: 24px;}
+h3 {font-size: 18px;}
+h4 {font-size: 16px;}
+
+.my-view h1, .my-view h2 {
+        color: white;
+        font-weight: bold;
+}
+
+/* COMMAND RESULTS */
+.my-view .results-status {
+        font-weight: bold;
+        color: whitesmoke;
+        padding: 5px;
+        margin: 0px;
+}
+.my-view .results-error {
+         background: #f44336;
+}
+.my-view .results-success {
+        background: #8BC34A;
+}
+.my-view .results-data {
+        font-weight: bold;
+        background: whitesmoke;
+        padding: 5px;
+        margin: 0px;
+        color: #666;
+}
+.my-view .results-status p,
+.my-view .results-data p {
+        padding: 0px;
+        margin: 0px;
+}
+
+
+/* TESTCASES */
+/* TESTCASES > Summary-header */
+.my-view .summary-header {
+        padding: 0px;
+        margin: 0px;
+        margin-top: 20px;
+        background-color: #ECEFF1;
+}
+.my-view .summary-header h3 {
+        padding: 5px;
+        margin: 0px;
+        color: #757575;
+        font-weight: bold;
+}
+/* TESTCASES > Summary */
+.my-view .summary {
+        padding: 0px;
+        margin: 0px;
+        border-color: black;
+        border: 1px;
+
+}
+.my-view .summary .counter {
+        border: 2px solid;
+}
+
+.my-view .summary p {
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+
+}
+.my-view .summary b {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+
+}
+.my-view .summary .total {
+        background-color: #607D8B;
+        border-color: #455A64;
+        border-top-color: #90A4AE;
+}
+.my-view .summary .passed {
+        background-color: #8BC34A;
+        border-color: #689F38;
+        border-top-color: #AED581;
+}
+.my-view .summary .fails {
+        background-color: #FF9800;
+        border-color: #F57C00;
+        border-top-color: #FFB74D;
+}
+.my-view .summary .errors {
+        background-color: #f44336;
+        border-color: #d32f2f;
+        border-top-color: #e57373;
+}
+
+/* TESTCASES > Item-list,Items */
+.my-view .item-list {
+        margin:0px;
+        padding: 0px;
+}
+.my-view .item-list .item {
+        border: 0px;
+        border-bottom: 1px solid #B0BEC5;
+        background: #ECEFF1;
+        color: black;
+        padding: 0px;
+        margin:0px;
+}
+.my-view .item-list .item:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}
+.my-view .item-list .item h4 {
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+}
+.my-view .item-list .item h4.truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+.my-view .item-list .item h4.ok {
+        color: #8BC34A;
+}
+.my-view .item-list .item h4.failure {
+        color: #f44336;
+}
+.my-view .item-list .item p.details {
+        color: #757575;
+        font-size: 12px;
+        font-weight: bold;
+}
+.item-expand {
+        position: relative;
+        width: 100%;
+        transition: max-height 0.1s ease-out;
+        overflow: hidden;
+}
+.item-expand.inactive:after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        /*height: 15px;*/
+        height:0px;
+        width: 100%;
+        display: block;
+}
+.item-expand.active {
+        transition: max-height 0.3s ease-out;
+}
+.item-expand-footer {
+        font-weight: bold;
+        color: #666;
+        margin-top: 5px;
+}
+.item-expand-footer i {
+        font-size: 16px;
+        margin-right: 5px;
+}
+
+/* FOOTER */
+.footer {
+        text-align: center;
+}
+.trademark {
+        font-size: 12px;
+        font-weight: bold;
+        color: #0099CC;
+}
+.trademark a {
+        color: #00CCFF;
+}
+.trademark a:hover {
+        color: #FFF;
+}
+.trademark a:visited {
+        color: #00CCFF;
+}
+
+/* SETTINGS */
+.my-view .settingsForm {
+        background-color: whitesmoke;
+}
+.my-view .settingsForm label{
+        padding: 5px;
+        margin: 0px;
+        border: 0px solid;
+}
+.my-view .settingsForm label .input-label{
+        padding: 0px;
+        margin: 0px;
+        font-weight: bold;
+}
+.my-view .settingsForm label input.input-field{
+        padding: 5px;
+        margin: 0px;
+        border: 1px solid #CCC;
+        background-color: #FFF;
+}
+.my-view .settingsForm label.mcheckbox{
+        padding-left: 50px;
+        border: 1px solid #CCC;
+        font-size: 14px;
+        color: #000;
+}

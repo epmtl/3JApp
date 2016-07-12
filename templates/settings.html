@@ -1,0 +1,36 @@
+<ion-view title="Home" id="settings" class="my-view">
+    <ion-content padding="true" class="has-header">
+        <div class="animated bounceInLeft">
+            <h2 id="home-heading">Settings</h2>
+        </div>
+        <div class="settingsForm top-border-rounded animated bounceInRight">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Jenkins URL</span>
+                <input class= "input-field" ng-change="updateURL()" ng-model="settings.url" type="text" placeholder="http://www.myjenkins.com">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Username</span>
+                <input class= "input-field" ng-change="updateUsername()" ng-model="settings.username" type="text" placeholder="username">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input class= "input-field" ng-change="updatePassword()" ng-model="settings.password" type="text" placeholder="password">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Job Name</span>
+                <input class= "input-field" ng-change="updateJobname()" ng-model="settings.jobname" type="text" placeholder="jobname">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Build Token</span>
+                <input class= "input-field" ng-change="updateToken()" ng-model="settings.token" type="text" placeholder="token">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">JUNIT Test Result File</span>
+                <input class= "input-field" ng-change="updateTestresultfile()" ng-model="settings.testresultfile" type="text" placeholder="myJUNITtestfile.xml">
+            </label>
+            <label class="item item-input item-stacked-label">
+            <button class="button button-block button-calm" ng-click="resetSettings()">Reset to default</button>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

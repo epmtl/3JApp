@@ -1,0 +1,49 @@
+<ion-view title="Jenkins" id="jenkins" class="my-view">
+    <ion-content padding="true" class="has-header">
+        
+        <div class="row animated bounceInLeft" layout="row">
+            <div style="width: 70px"><img src="img/jenkins.png" width="70px"/></div>
+            <div class="col">
+                <h2 id="jenkins-heading" class="animated bounceInLeft">Jenkins Job</h2>
+                <button id="action" ng-click="launchJenkinsCommand()" ng-disabled="buttondisabled"
+                    class="button icon icon-left ion-play button-assertive bottom-border-shadow">Start Jenkins Job</button>
+            </div>
+        </div>
+
+        <div class="animated bounceInRight">
+            <div class="results-status top-border-rounded bottom-border-shadow" ng-class="{'results-error': status > 202 || status < 200, 'results-success': status >= 200 }">
+                <p id="status-code"><b>HTTP STATUS CODE: {{status}}</b></p>
+            </div>
+            <div class="results-data">
+                <p id="data-header"><u>Status:</u></p>
+                <p id="data" ng-bind-html="data"></p>
+            </div>
+        </div>
+
+        <div class="testcases animated bounceInLeft" ng-if="testsuite.testsuite != null && testsuite.testsuite != undefined">
+            <div class="summary-header"><h3>Testcase results</h3></div>
+            <div class="row summary">
+                <div class="col counter passed"><p>PASSED<br/><b>{{passed}}</b></p></div>
+                <div class="col counter fails"><p>FAILS<br/><b>{{failures}}</b></p></div>
+                <div class="col counter errors"><p>ERRORS<br/><b>{{errors}}</b></p></div>
+                <div class="col counter total"><p>TOTAL<br/><b>{{total}}</b></p></div>
+            </div>
+
+            <div class="item-list">
+                <div ng-repeat="tc in testsuite.testsuite.testcase" class="item item-text-wrap">
+                    <div class="row" ng-click="toggleItem(tc)">
+                        <div class="col" ng-class="isItemShown(tc) ? 'item-expand active' : 'item-expand inactive'">  
+                            <h4 class="icon icon-left truncate" ng-class="tc.failure!=null ? 'failure' : 'ok'"><i class="icon" ng-class="tc.failure!=null ? 'ion-close-circled' : 'ion-checkmark-circled'"></i>&nbsp;{{tc._name}}</h4>
+                            <p class="details" ng-If="tc.failure" ng-show="isItemShown(tc)">{{tc.failure.__cdata}}</p>
+                        </div>
+                        <div class="col-100px item-expand-footer" style="width: 30px" ng-If="tc.failure!=null">
+                            <i class="arrow" ng-If="tc.failure!=null" ng-class="isItemShown(tc) ? 'ion-arrow-up-b' : 'ion-arrow-down-b'"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"><p class="trademark">v{{version}} - For more information about Jenkins: <a href="https://jenkins.io/">https://jenkins.io/</a></p></div>
+    </ion-content>
+</ion-view>
