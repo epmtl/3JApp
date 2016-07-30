@@ -2,7 +2,7 @@
     "default": {
         "title": "Test Profile",
         "url" : "https://jenkins-epmtl.rhcloud.com/",
-        "username" : "Test",
+        "username" : "test",
         "password" : "test",
         "jobname" : "test",
         "token" : "test",
